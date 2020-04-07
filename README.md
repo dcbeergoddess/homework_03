@@ -1,64 +1,34 @@
 # Homework_03 JavaScript Password Generator
   Homework Due Monday April 6th 12am
+  Having trouble getting any alerts or prompts to come up initally.
+  Happy to find some time to go over it when one of you all can. I intended to be moving to the new house right before class started but we had to push it back to this past weekend and coming weekend thus I did not much time to review class videos and activities in prepration for the assignment or get much outside reasearch done. I think I have a pretty good handle on where this needs to go overall but just missing some of the little steps along the way. I should have some more time to research and do outside reading to help me along and will continue to do so after I submitt the assignment in order to catch up!! Not totally lost but not totally putting all the little steps fully together yet!
 
 ## Pseudo Code from Homework README Acceptance Criteria
 
-  ```
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-------Maybe and object within an object??? below
-THEN I am presented with a series of prompts for password criteria
-    Make confirm statements to ask what user wants
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
 WHEN prompted for the length of the password
 THEN I choose a length of at least 8 characters and no more than 128 characters
-
-
-    code a prompt that asks the user for how many characters in the passwords must be between 8 and 128
-    store response in variable
-
-
+  Code a prompt that asks the user for how many characters in the password
+  Must be between 8 and 128
+  Store response in a variable
 WHEN prompted for character types to include in the password
 THEN I choose lowercase, uppercase, numeric, and/or special characters
-
-
-      do a confirm for lowercase
-      confirm for uppercase
-      confirm for numeric
-      confirm for special characters
-      do a varaible for each, conditional statements
-
-
-
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
+  Confirm for lowercase
+  Confirm for uppercase
+  Confirm for numeric
+  Confirm for special characters
 WHEN all prompts are answered
 THEN a password is generated that matches the selected criteria
-
-
-    before you start generating passwords, need to create arrays for lowercase letters, uppercase, numbers, special characters, do this at the very beginning 
-
-    create and empty an array that will hold characters allowed in the solution. building final array that includes the options. 
-
-    If user choose lowercase
-      add all lowercase options to that array
-    If user choose uppercase
-      add all uppercase options ot that array
-  
-    We end up with ONE BIG ARRAY that holds all possible characters in the solution. 
-
-    If they choose 100 as the lengeth. you have to grab 100 times...
-    Create an empty string for the final password
-    loop from 1 to the number of characters in the password // ex 100
-      Determine a random number between 0 and the length-1 of our ONE BIG ARRAY (random index number out of our array between 0 and 299)
-
-      Whatever that random index is, grab that value and add it to the password string
-
-
+  Create an array for lowercase letters [ "a", "b", "c", ...]
+  Create an empty array that will hold all characters allowed in the solution
+  If user chose lowercase:
+    Add all lower case options to that array
+  We end up with ONE BIG ARRAY that holds all possible characters in the solution
+  Create an empty string for the final password
+  Loop from 1 to the number of characters in the password  // ex 100
+    Determine a random number between 0 and the length-1 of our ONE BIG ARRAY
+    Whatever that random index is, grab that value, and add it to the password string
 WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
-```
 
 
 

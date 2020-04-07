@@ -21,7 +21,7 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  var password = generatePassword(allowedCharacters);
   var passwordText = document.querySelector("#password");
 
   console.log(password)
@@ -38,7 +38,7 @@ generateBtn.addEventListener("click", writePassword);
 
 function getPasswordOptions (number, upperCase, lowerCase, specialCharacters) {
   // Get User input
-  // convert string into number, parsing, from Dan example
+  // convert string into number, parsing, from Dan example, had problems getting any prompt to come up???
   var passwordLength = parseInt(prompt("How may characters would you like your password to be?"));
    // limit length of password
   if(passwordLength < 8 || passwordLength > 128) {
@@ -86,8 +86,17 @@ function getPasswordOptions (number, upperCase, lowerCase, specialCharacters) {
   // generate loop for invalid options
   if(allowedCharacters){
   // figure out what to put here 
-
   }
-
 }
 
+  /* GARY NOTES:ONE BIG ARRAY that holds all possible characters in the solution
+  Create an empty string for the final password
+  Loop from 1 to the number of characters in the password  // ex 100
+  Determine a random number between 0 and the length-1 of our ONE BIG ARRAY
+  Whatever that random index is, grab that value, and add it to the password string */
+
+  // Random index possibilty. 
+  var finalPassword = ("")
+  var finalPassword = Math.floor(Math.random() * finalPassword.length) + 1;
+  console.log(finalPassword)
+  return finalPassword
