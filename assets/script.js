@@ -36,7 +36,7 @@ generateBtn.addEventListener("click", writePassword);
 // picking criteria options
 // First ask for length then criteria options
 
-function getPasswordOptions () {
+function getPasswordOptions (number, upperCase, lowerCase, specialCharacters) {
   // Get User input
   // convert string into number, parsing, from Dan example
   var passwordLength = parseInt(prompt("How may characters would you like your password to be?"));
@@ -46,37 +46,48 @@ function getPasswordOptions () {
   } 
   console.log(passwordLength)
 
-  var chooseLowerCase = confirm("Do you want your password to include lowercase letters?");
-  var chooseUpperCase = confirm("Do you want your password to include uppercase letters?");
   var chooseNumber = confirm("Do you want your password to include numbers?");
+  var chooseUpperCase = confirm("Do you want your password to include uppercase letters?");
+  var chooseLowerCase = confirm("Do you want your password to include lowercase letters?");
   var chooseSpecialCharacters = confirm("Do you want your password to include special characters?");
     
-  // lowerCase Loop
-  if(chooseLowerCase){
-    for(var i = 0; i < lowerCase.length; i++){
+  // number loop
+  if (chooseNumber){
+    for(var i = 0; i < number.length; i++){
+      // push to allowedCharacter array (will do for all the following loops)
+      allowedCharacters.push(i);
       console.log(i);
     }
   }
-    
+  
   // upperCase Loop
   if(chooseUpperCase){
     for(var i = 0; i < upperCase.length; i++){
+      allowedCharacters.push(i);
       console.log(i);
     }
   }
-    
-  // number loop
-  if(chooseNumber){
-    for(var i = 0; i < number.length; i++){
+  
+  // lowerCase Loop
+  if(chooseLowerCase){
+    for(var i = 0; i < lowerCase.length; i++){
+      allowedCharacters.push(i);
       console.log(i);
     }
   }
-    
+      
   // specialCharacters loop
   if(chooseSpecialCharacters){
     for(var i = 0; i < specialCharacters.length; i++){
+      allowedCharacters.push(i);
       console.log(i);
     }
   }
+  // generate loop for invalid options
+  if(allowedCharacters){
+  // figure out what to put here 
+
+  }
+
 }
 
