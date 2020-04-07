@@ -1,7 +1,7 @@
 # Homework_03 JavaScript Password Generator
   Homework Due Monday April 6th 12am
   Having trouble getting any alerts or prompts to come up initally.
-  Happy to find some time to go over it when one of you all can. I intended to be moving to the new house right before class started but we had to push it back to this past weekend and coming weekend thus I did not much time to review class videos and activities in prepration for the assignment or get much outside reasearch done. I think I have a pretty good handle on where this needs to go overall but just missing some of the little steps along the way. I should have some more time to research and do outside reading to help me along and will continue to do so after I submitt the assignment in order to catch up!! Not totally lost but not totally putting all the little steps fully together yet!
+  Happy to find some time to go over it when one of you all can maybe in a breakout room during office hours. I intended to be moving to the new house right before class started but we had to push it back due (becuase of the pandemic) to this past weekend and coming weekend thus I did not much time to review class videos and activities in prepration for the assignment or get much outside reasearch done. I think I have a pretty good handle on where this needs to go overall but just missing some of the little steps along the way. I should have some more time to research and do outside reading to help me along and will continue to do so after I submitt the assignment in order to catch up!! Not totally lost but not totally putting all the little steps fully together yet!
 
 ## Pseudo Code from Homework README Acceptance Criteria
 
@@ -29,7 +29,6 @@ THEN a password is generated that matches the selected criteria
     Whatever that random index is, grab that value, and add it to the password string
 WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
-
 
 
 ## Notes From TAs for Completing Homework

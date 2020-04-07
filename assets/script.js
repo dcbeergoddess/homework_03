@@ -21,6 +21,7 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
+  // added allowedCharacters to password variable
   var password = generatePassword(allowedCharacters);
   var passwordText = document.querySelector("#password");
 
@@ -38,8 +39,9 @@ generateBtn.addEventListener("click", writePassword);
 
 function getPasswordOptions (number, upperCase, lowerCase, specialCharacters) {
   // Get User input
-  // convert string into number, parsing, from Dan example, had problems getting any prompt to come up???
-  var passwordLength = parseInt(prompt("How may characters would you like your password to be?"));
+  // convert string into number, parsing, from Dan example
+  // had problems getting any prompt to come up???
+  var passwordLength = parseInt(prompt("How many characters would you like your password to be?"));
    // limit length of password
   if(passwordLength < 8 || passwordLength > 128) {
     alert("Password must be between 8 and 128 characters")
@@ -59,7 +61,6 @@ function getPasswordOptions (number, upperCase, lowerCase, specialCharacters) {
       console.log(i);
     }
   }
-  
   // upperCase Loop
   if(chooseUpperCase){
     for(var i = 0; i < upperCase.length; i++){
@@ -67,15 +68,13 @@ function getPasswordOptions (number, upperCase, lowerCase, specialCharacters) {
       console.log(i);
     }
   }
-  
   // lowerCase Loop
   if(chooseLowerCase){
     for(var i = 0; i < lowerCase.length; i++){
       allowedCharacters.push(i);
       console.log(i);
     }
-  }
-      
+  }    
   // specialCharacters loop
   if(chooseSpecialCharacters){
     for(var i = 0; i < specialCharacters.length; i++){
@@ -83,9 +82,9 @@ function getPasswordOptions (number, upperCase, lowerCase, specialCharacters) {
       console.log(i);
     }
   }
-  // generate loop for invalid options
-  if(allowedCharacters){
-  // figure out what to put here 
+  // generate loop/alert for invalid if user does not confirm any options
+  if(allowedCharacters.length === 0){
+    alert("Unable to generate password. Please choose at least one character option for your password!")
   }
 }
 
@@ -95,8 +94,11 @@ function getPasswordOptions (number, upperCase, lowerCase, specialCharacters) {
   Determine a random number between 0 and the length-1 of our ONE BIG ARRAY
   Whatever that random index is, grab that value, and add it to the password string */
 
-  // Random index possibilty. 
-  var finalPassword = ("")
+  // Random index possibilty.
+  // probably need to create function for password with allowed characters instead of what I have below. Need to spend some more time researching math.floor, math.random, etc. 
+  var finalPassword = ("allowedCharacters")
   var finalPassword = Math.floor(Math.random() * finalPassword.length) + 1;
   console.log(finalPassword)
+  // get finalPassword generated
   return finalPassword
+
